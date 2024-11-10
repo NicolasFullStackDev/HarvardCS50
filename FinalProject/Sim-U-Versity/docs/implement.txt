@@ -1,0 +1,94 @@
+Your university should have
+1 - Name
+2 - Courses (Types of Bachelor)
+    Art
+        Architecture
+        Film Studies
+        Fine Arts
+        Graphic Design
+        Photography
+
+    Business Admin
+        Enterpreneurship
+        Finance
+        Human Resources
+        Marketing
+        Operations Management
+    Law
+        Coorporate Law
+        Criminal Law
+        Environmental Law
+        Family Law
+        International Law
+    Medicine
+        General Medicine
+        Nursing
+        Pharmacy
+        Public Health
+        Surgery
+    Science
+        Biology
+        Chemistry
+        Mathematics
+        Physics
+        Psychology
+    Technology
+        Computer Science
+        Computer Engineering
+        Electrical Engineering
+        Mechanical Engineering
+        Software Engineering
+
+3 - Scores
+    Academics
+        -> Total Programs
+        -> Total Teachers
+        -> Student Success Rate
+
+    Athletics
+        -> Teams
+            Basketball
+            Gymnastics
+            Track and Field
+    Campus
+        Cafeteria
+        Classrooms (6 small, 30  people each)
+        Classrooms (4 medium, 50 people each)
+        Lecture Hall (250 people each)
+        Library
+        Dorms small (180 people)
+        Dorms medium (200 people)
+        Dorms large (250 people)
+
+        *Academics Booster
+        Experimental Research Lab => (specific program)
+        Computer Lab => (all programs)
+
+
+        *Athletics Booster
+        General Purpose Gym
+        Indoors Gym
+        Basketball Court
+        Track and Field Stadium
+
+4 - Special Events
+    These events will spawn randomly based on the count and student profile
+    Clubs
+        Book club
+        Chess club
+        Movie club
+        Computer Science club
+
+5 - Investments
+    Startup Founding: Allows the user to direct certain ammounts of financial founding to startups,
+    which will increase academic prestige and allow students to develop.
+    Successful startups that start on your campus will eventually make donations to your university
+    and increase its prestige
+
+    Free Summer Courses: Gather the attention of new students with free summer courses. Use them with
+    care since you must pay for all of the expenses
+
+    Paid Summer Courses: Gather extra cash from paid courses. Balance free and paid courses to keep students
+    happy and attract new students too
+
+    Athletic scholarships: Grand scholarships to top athletes to increase your Athletics Score

@@ -1,0 +1,162 @@
+/* Import JetBrains Mono font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* Color Palette */
+:root {
+  --color-primary: #3498db;
+  --color-secondary: #2ecc71;
+  --color-accent: #e74c3c;
+  --color-bg: #f5f5f5;
+  --color-text: #333;
+  --color-sidebar: #2c3e50;
+  --color-sidebar-hover: #34495e;
+
+  /* Spacing and Sizing */
+  --sidebar-width: 15rem;
+  --collapsed-sidebar-width: 4rem; /* Smaller width when collapsed */
+  --icon-size: 1.5rem;
+  --font-size: 1rem;
+  --padding: 1rem;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--font-size);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  transition: margin-left 0.3s ease;
+}
+
+/* Sidebar */
+.sidebar {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--color-sidebar);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateX(0);
+  transition: transform 0.3s ease, width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+/* Collapsed Sidebar (smaller width) */
+.sidebar.collapsed {
+  width: var(--collapsed-sidebar-width);
+}
+
+/* Sidebar toggle button */
+.sidebar .toggle-btn {
+  position: absolute;
+  top: -0.5rem;
+  right: -1rem;
+  background-color: var(--color-sidebar);
+  border-radius: 20%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Sidebar Links */
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* nav-link centralization */
+.nav-link {
+  color: white;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link a {
+  color: white;
+  padding: var(--padding);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: color-bg 0.3s ease;
+}
+
+/* Hover Effect for nav-link */
+.nav-link:hover {
+  background-color: var(--color-sidebar-hover);
+  cursor: pointer;
+}
+
+/* Icon Style */
+.nav-link a .icon {
+  font-size: var(--icon-size);
+  margin-right: 0.75rem;
+}
+
+/* Nav-title Styles */
+.nav-title {
+  color: white;  /* Default color for nav-title */
+  display: inline-block;
+  margin-left: 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* When sidebar is collapsed, show only the icons */
+.sidebar.collapsed .nav-title {
+  display: none; /* Hide nav-title text when collapsed */
+}
+
+.nav-link:hover .nav-title {
+  display: block;
+  white-space: nowrap;  /* Prevent text from wrapping to the next line */
+  background-color: var(--color-sidebar-hover);  /* Change background color on hover */
+}
+
+/* Responsive Grid Layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--padding);
+  padding: var(--padding);
+  margin-left: var(--sidebar-width);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.col {
+  flex: 1;
+  padding: var(--padding);
+}
+
+/* Example media queries for responsiveness */
+@media (min-width: 48rem) {
+  .col-6 {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 64rem) {
+  .col-4 {
+    flex: 0 0 33.33%;
+  }
+  .col-3 {
+    flex: 0 0 25%;
+  }
+}
